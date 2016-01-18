@@ -1,0 +1,11 @@
+language: erlang
+
+env:
+  - LUA="luajit"
+
+install:
+  - sudo apt-get install luajit
+  - sudo apt-get install luarocks
+  - sudo luarocks install busted
+
+script: "./test.sh"
