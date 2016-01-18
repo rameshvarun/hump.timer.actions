@@ -1,4 +1,4 @@
-# hump.timer.actions
+# hump.timer.actions [![Build Status](https://travis-ci.org/rameshvarun/hump.timer.actions.svg?branch=master)](https://travis-ci.org/rameshvarun/hump.timer.actions)
 Composable actions, powered by [hump.timer](https://hump.readthedocs.org/en/latest/timer.html). Inspired by [LibGDX actions](https://github.com/libgdx/libgdx/wiki/Scene2d#actions). Represents a `monoid`. This approach also lends itself to manipulation by higher order functions (similar to parser combinators).
 
 ## Example
