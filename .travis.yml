@@ -1,8 +1,16 @@
-language: erlang
+language: c
+
+before_install:
+  - wget -O - http://luajit.org/download/LuaJIT-2.0.4.tar.gz | tar xz
+  - cd LuaJIT-2.0.4
+  - make && sudo make install INSTALL_TSYMNAME=lua;
+  - cd ..
+  - wget -O - http://luarocks.org/releases/luarocks-2.2.2.tar.gz | tar xz || wget -O - http://keplerproject.github.io/luarocks/releases/luarocks-2.2.2.tar.gz | tar xz
+  - cd luarocks-2.2.2
+  - ./configure --with-lua-include=/usr/local/include/luajit-2.0;
+  - make build && sudo make install
 
 install:
-  - sudo apt-get install lua5.2
-  - sudo apt-get install luarocks
   - sudo luarocks install busted
 
 script: "./test.sh"
