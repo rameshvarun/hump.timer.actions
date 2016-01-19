@@ -9,6 +9,7 @@ before_install:
   - cd luarocks-2.2.2
   - ./configure --with-lua-include=/usr/local/include/luajit-2.0;
   - make build && sudo make install
+  - cd ..
 
 install:
   - sudo luarocks install busted
