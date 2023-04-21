@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: sudo apt-get install -y lua5.3 luarocks
+    - run: sudo apt-get install -y lua5.3 luarocks liblua5.3-dev
     - run: sudo luarocks install busted
     - run: ./test.sh
